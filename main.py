@@ -75,7 +75,7 @@ async def mantlejump(ctx):
 @bot.command()
 async def lurch(ctx):
     await ctx.send("Hier der Link zum Lurch Guide: \nGuide - https://www.youtube.com/watch?v=JonGQ6F_p6E\n"
-                   "Trainer - https://lurch-trainer.web.app/trainer")
+                   "Trainer by LiTTle - https://lurch-trainer.web.app/trainer")
 
 # !ubounce - link zum eraiseddd video
 @bot.command()
@@ -110,7 +110,7 @@ async def launch(ctx):
 # !climbspace - sendet climbspace png
 @bot.command()
 async def climbspace(ctx):
-    climbspace_file = discord.File("graphic_climb_space_with_zones light.png")
+    climbspace_file = discord.File("graphic_climb_space_with_zones_light.png")
     await ctx.send(file=climbspace_file)
 
 #------------------------------ADMIN---------------------------------#
