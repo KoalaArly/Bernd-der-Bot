@@ -43,10 +43,11 @@ async def help(ctx):
         "\n"
         "Movement Ressourcen:\n"
         "\u001b[33m!bhop        \u001b[0m– Listet bugged FPS-Bereiche für Bhops auf\n"
+        "\u001b[33m!climbspace  \u001b[0m– Sendet die 'Climb Space'-Grafik\n"
         "\u001b[33m!lurch       \u001b[0m– Verlinkt nützliche Lurch Ressourcen\n"
         "\u001b[33m!mantlejump  \u001b[0m– Verlinkt guten Mantlejump Guide\n"
         "\u001b[33m!superglide  \u001b[0m– Verlinkt nützliche Superglide Ressourcen\n"
-        "\u001b[33m!wallzones   \u001b[0m– Verlinkt gutes Wallzone Video\n"
+        "\u001b[33m!ubounce     \u001b[0m– Verlinkt gutes 'Climb Zone' Video\n"
         "\u001b[33m!wiki        \u001b[0m– Verlinkt das Movement-Wiki\n"
         "\n"
         "Apex Zeugs:\n"
@@ -76,10 +77,10 @@ async def lurch(ctx):
     await ctx.send("Hier der Link zum Lurch Guide: \nGuide - https://www.youtube.com/watch?v=JonGQ6F_p6E\n"
                    "Trainer - https://lurch-trainer.web.app/trainer")
 
-# !wallzones - link zum eraiseddd video
+# !ubounce - link zum eraiseddd video
 @bot.command()
-async def wallzones(ctx):
-    await ctx.send("Hier der Link zum Wallzone Guide: \nGuide - https://www.youtube.com/watch?v=RWEO8mERoCE")
+async def ubounce(ctx):
+    await ctx.send("Hier der Link zu einem guten Guide: \nGuide - https://www.youtube.com/watch?v=RWEO8mERoCE")
 
 # !bhop - angabe der bugged fps-bereiche
 @bot.command()
@@ -106,6 +107,13 @@ async def launch(ctx):
     "\u001b[37m──────────────────────────\u001b[0m\n"
     "```")
 
+# !climbspace - sendet climbspace png
+@bot.command()
+async def climbspace(ctx):
+    climbspace_file = discord.File("graphic_climb_space_with_zones light.png")
+    await ctx.send(file=climbspace_file)
+
+#------------------------------ADMIN---------------------------------#
 # !clear - cleart n + 1 der letzten nachrichten
 @bot.command()
 @commands.has_role("Koala")
