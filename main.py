@@ -114,8 +114,12 @@ async def launch(ctx):
 # !climbspace - sendet climbspace png
 @bot.command()
 async def climbspace(ctx):
-    climbspace_file = discord.File("graphic_climb_space_with_zones_light.png")
-    await ctx.send(file=climbspace_file)
+    file_path = os.path.join(
+        os.path.dirname(__file__),
+        "graphics",
+        "graphic_climb_space_with_zones_light.png"
+    )
+    await ctx.send(file=discord.File(file_path))
 
 #------------------------------ADMIN---------------------------------#
 # !clear - cleart n + 1 der letzten nachrichten
