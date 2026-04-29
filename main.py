@@ -21,7 +21,7 @@ def setup_member_counter(bot):
     async def update_member_count(guild):
         channel = guild.get_channel(CHANNEL_ID)
         if channel:
-            await channel.edit(name=f"👥 Mitglieder: {guild.member_count}")
+            await channel.edit(name=f"😼》atzen [ {guild.member_count} ]")
 
     @bot.event
     async def on_member_join(member):
