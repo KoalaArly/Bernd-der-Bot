@@ -18,6 +18,10 @@ bot = commands.Bot(command_prefix='!', intents=intents, help_command=None)
 async def on_ready():
     print(f"{bot.user.name} is starting")
 
+    channel = bot.get_channel(1428566367350554764)
+    if channel:
+        await channel.send("Bin wieder da, mein Akh.")
+
 # added custom emoji bei neuem user join
 @bot.event
 async def on_message(msg):
