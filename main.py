@@ -116,7 +116,7 @@ async def climbspace(ctx):
 #------------------------------ADMIN---------------------------------#
 # !clear - cleart n + 1 der letzten nachrichten
 @bot.command()
-@commands.has_role("Koala")
+@commands.has_role("Guides")
 async def clear(ctx, amount: int):
     await ctx.channel.purge(limit=amount + 1)
 
