@@ -14,13 +14,41 @@ intents.members = True
 
 bot = commands.Bot(command_prefix='!', intents=intents, help_command=None)
 
+# member count 
+def setup_member_counter(bot):
+    CHANNEL_ID = 1499107568881238147
+
+    async def update_member_count(guild):
+        channel = guild.get_channel(CHANNEL_ID)
+        if channel:
+            await channel.edit(name=f"👥 Mitglieder: {guild.member_count}")
+
+    @bot.event
+    async def on_member_join(member):
+        await update_member_count(member.guild)
+
+    @bot.event
+    async def on_member_remove(member):
+        await update_member_count(member.guild)
+
+    return update_member_count
+
+update_member_count = setup_member_counter(bot)
+
 @bot.event
 async def on_ready():
+
+    # bernd terminal start message
     print(f"{bot.user.name} is starting")
 
+    # bermd restart message
     channel = bot.get_channel(1428566367350554764)
     if channel:
         await channel.send("Bin wieder da, mein Akh.")
+
+    # member counter initial update
+    for guild in bot.guilds:
+        await update_member_count(guild)
 
 # added custom emoji bei neuem user join
 @bot.event
