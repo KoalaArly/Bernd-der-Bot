@@ -137,11 +137,11 @@ async def progress(ctx):
     "\u001b[35mIn Bearbeitung\u001b[0m:\n"
     "\u001b[37m──────────────────────────\u001b[0m\n"
     ">>> \u001b[35mAllgemeines\u001b[0m <<<\n"
-    "- \u001b[32mÜberarbeitung einiger Guides\u001b[0m\n"
-    "- \u001b[32mVideo Clips/Grafiken zur Visualisierung\u001b[0m\n"
-    ">>> \u001b35mNeue Guides\u001b[0m <<<\n"
-    "- \u001b[32mBounce-Chaining\u001b[0m\n"
-    "- \u001b[32mClimb L0ck\u001b[0m\n"
+    "- \u001b[33mÜberarbeitung einiger Guides\u001b[0m\n"
+    "- \u001b[33mVideo Clips/Grafiken zur Visualisierung\u001b[0m\n"
+    ">>> \u001b[35mNeue Guides\u001b[0m <<<\n"
+    "- \u001b[33mBounce-Chaining\u001b[0m\n"
+    "- \u001b[33mClimb L0ck\u001b[0m\n"
     "\u001b[37m──────────────────────────\u001b[0m\n"
     "```")
 
