@@ -134,7 +134,7 @@ async def climbspace(ctx):
 @bot.command()
 async def progress(ctx):
     await ctx.send("```ansi\n"
-    "\u001b[35mIn Bearbeitung\u001b[0m:\n"
+    "\u001b[1;35mIn Bearbeitung\u001b[0m:\n"
     "\u001b[37m──────────────────────────\u001b[0m\n"
     ">>> \u001b[35mAllgemeines\u001b[0m <<<\n"
     "- \u001b[33mÜberarbeitung einiger Guides\u001b[0m\n"
