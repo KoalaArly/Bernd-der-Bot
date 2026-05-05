@@ -20,6 +20,11 @@ async def on_ready():
     # bernd terminal start message
     print(f"{bot.user.name} is starting")
 
+    # custom status
+    await bot.change_presence(
+        activity=discord.Game(name="!help - Liste aller Funktionen")
+    )
+
     # bermd restart message
     channel = bot.get_channel(1428566367350554764)
     if channel:
@@ -47,6 +52,7 @@ async def help(ctx):
         "\u001b[37m────────────────────────────────\u001b[0m\n"
         "Bernd Basics:\n"
         "\u001b[33m!help        \u001b[0m– Zeigt diese Liste an\n"
+        "\u001b[33m!progress    \u001b[0m– Liste von zukünftigen Erweiterungen\n"
         "\n"
         "Movement Ressourcen:\n"
         "\u001b[33m!bhop        \u001b[0m– Listet bugged FPS-Bereiche für Bhops auf\n"
@@ -123,6 +129,21 @@ async def climbspace(ctx):
         "graphic_climb_space_with_zones_light.png"
     )
     await ctx.send(file=discord.File(file_path))
+
+# !progress - liste von zukünftigen erweiterungen
+@bot.command()
+async def progress(ctx):
+    await ctx.send("```ansi\n"
+    "Nützliche \u001b[35mIn Bearbeitung\u001b[0m:\n"
+    "\u001b[37m──────────────────────────\u001b[0m\n"
+    ">>> \u001b[35mAllgemeines\u001b[0m <<<\n"
+    "- \u001b[35mÜberarbeitung einiger Guides\u001b[0m\n"
+    "- \u001b[35mVideo Clips/Grafiken zur Visualisierung\u001b[0m\n"
+    ">>> \u001b35mNeue Guides\u001b[0m <<<\n"
+    "- \u001b[35mBounce-Chaining\u001b[0m\n"
+    "- \u001b[35mClimb L0ck\u001b[0m\n"
+    "\u001b[37m──────────────────────────\u001b[0m\n"
+    "```")
 
 #------------------------------ADMIN---------------------------------#
 # !clear - cleart n + 1 der letzten nachrichten
